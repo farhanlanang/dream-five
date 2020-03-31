@@ -9,7 +9,7 @@ const Home = () => (
 
     <main>
       <h1 className="title">
-        Welcome to dream-5 
+        Welcome to dream-5
       </h1>
 
       <div className="grid">
