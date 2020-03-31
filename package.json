@@ -6,11 +6,8 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "analyze:lint": "eslint --ext .tsx --ext .ts --ext .js .",
-    "analyze:prettier": "prettier --check '**/*.{tsx,ts,js,scss,md,json}'",
-    "analyze": "npm run analyze:lint && npm run analyze:prettier",
     "fix:lint": "eslint --ext .tsx --ext .ts --ext .js . --fix",
-    "fix:prettier": "prettier --write '**/*.{tsx,ts,js,scss,md,json}'",
+    "fix:prettier": "prettier --write **/*.{tsx,ts,js}",
     "fix": "npm run fix:lint && npm run fix:prettier"
   },
   "dependencies": {
@@ -33,15 +30,23 @@
     "eslint-plugin-react": "^7.19.0",
     "eslint-plugin-standard": "^4.0.1",
     "husky": "^4.2.3",
+    "lint-staged": "^10.1.0",
     "prettier": "^2.0.2",
     "typescript": "^3.8.3",
     "yarnhook": "^0.4.3"
   },
   "husky": {
     "hooks": {
+      "pre-commit": "lint-staged",
       "post-checkout": "yarnhook",
       "post-merge": "yarnhook",
       "post-rewrite": "yarnhook"
     }
+  },
+  "lint-staged": {
+    "*.{tsx,ts,js}": [
+      "npm run fix",
+      "git add ."
+    ]
   }
 }
