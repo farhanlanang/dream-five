@@ -3,7 +3,7 @@ import Head from 'next/head';
 const Home = () => (
   <div className="container">
     <Head>
-      <title>Create Next App</title>
+      <title>Dream-Five</title>
       <link rel="icon" href="/favicon.ico" />
     </Head>
 
@@ -11,7 +11,7 @@ const Home = () => (
       <h1 className="title">Welcome to dream-5</h1>
 
       <div className="grid">
-        <a href="https://nextjs.org/docs" className="card">
+        <a href="./404.tsx" className="card">
           <h3>Documentation &rarr;</h3>
           <p>Find in-depth information about Next.js features and API.</p>
         </a>
