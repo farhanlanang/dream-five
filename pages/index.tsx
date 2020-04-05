@@ -1,25 +1,30 @@
 import Head from 'next/head';
+import Link from 'next/link';
 
 const Home = () => (
   <div className="container">
     <Head>
       <title>Dream-Five</title>
-      <link rel="icon" href="/favicon.ico" />
+      <link rel="icon" href="/sleep.png" />
     </Head>
 
     <main>
       <h1 className="title">Welcome to dream-5</h1>
 
       <div className="grid">
-        <a href="./404.tsx" className="card">
-          <h3>Documentation &rarr;</h3>
-          <p>Find in-depth information about Next.js features and API.</p>
-        </a>
+        <Link href="/404">
+          <a className="card">
+            <h3>Documentation &rarr;</h3>
+            <p>Find in-depth information about Next.js features and API.</p>
+          </a>
+        </Link>
 
-        <a href="https://nextjs.org/learn" className="card">
-          <h3>Learn &rarr;</h3>
-          <p>Learn about Next.js in an interactive course with quizzes!</p>
-        </a>
+        <Link href="/login">
+          <a className="card">
+            <h3>Learn &rarr;</h3>
+            <p>Learn about Next.js in an interactive course with quizzes!</p>
+          </a>
+        </Link>
 
         <a href="https://github.com/zeit/next.js/tree/master/examples" className="card">
           <h3>Examples &rarr;</h3>

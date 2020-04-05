@@ -5,7 +5,7 @@ const NotFound = () => (
   <div className="container">
     <Head>
       <title>NotFound 404</title>
-      <link rel="icon" href="/favicon.ico" />
+      <link rel="icon" href="/sleep.png" />
     </Head>
 
     <main>
@@ -101,20 +101,6 @@ const NotFound = () => (
           flex-direction: column;
         }
       
-    `}</style>
-
-    <style jsx global>{`
-      html,
-      body {
-        padding: 0;
-        margin: 0;
-        font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen, Ubuntu, Cantarell, Fira Sans,
-          Droid Sans, Helvetica Neue, sans-serif;
-      }
-
-      * {
-        box-sizing: border-box;
-      }
     `}</style>
   </div>
 );
